@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Marble Elimination - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="../index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="../index.html">Home and Quick Start</a><a href="../Data.html">Data: the CSV guide</a><a href="../Sequencer.html">Sequencer</a><a href="../Looks.html">Looks: themes, label styles and Shorts</a><a href="../Rendering.html">Rendering</a><h4>Formats</h4><a href="index.html">All formats</a><a href="Ranked_Columns.html">Ranked Column Race</a><a href="Height_and_Scale.html">Height and scale comparisons</a><a href="Unit_Piles.html">Unit piles and gold total</a><a href="Versus.html">Versus and Versus Chapters</a><a href="Bar_Chart_Race.html">Bar Chart Race</a><a href="Speed_Race.html">Speed Race and Speed Episodes</a><a href="Real_Time_Race.html">Real-Time Race</a><a href="Radius_Rings.html">Radius Rings</a><a href="Map_Stage.html">Map Stage</a><a href="Marble_Elimination.html" class="cur">Marble Elimination</a><a href="Quantity.html">Accumulator and Lap</a><a href="Spec_Card.html">Spec Card</a><a href="Environments.html">Environment demos</a><h4>Reference</h4><a href="../API.html">Blueprint API reference</a><a href="../FAQ.html">FAQ and troubleshooting</a><a href="../Credits.html">Credits and licenses</a></nav><main><h1 id="marble-elimination">Marble Elimination</h1>
+<p><strong>What it shows.</strong> Marbles roll down a spun-steel funnel and fall out one by one in score order until a single winner remains. A lower card names the contender and its score; a status strip counts the marbles still in play and announces the winner.</p>
+<p><img alt="Four marbles in the funnel with the status strip" src="img/format_marble_elimination.jpg" /></p>
+<p><strong>Actor:</strong> CK Marble Elimination. <strong>Demo map:</strong> <code>L_CK_MarbleElimination_Shorts</code> (9:16). In the supplied round Crimson, Amber and Jade leave in that order and Azure wins with 94 points.</p>
+<h2 id="data">Data</h2>
+<p>Give each marble a name and a score: <strong>Items</strong>, a CKItem DataTable or a CSV. Priority: DataTable, then CSV, then inline items. Set the inline row's colour to identify the marble on screen. Call <strong>Rebuild</strong> after changing the source in Blueprint.</p>
+<pre><code class="language-csv">label,value
+Azure,94
+Amber,71
+Jade,86
+Crimson,63
+</code></pre>
+<p>Sample: <code>SampleData/marble_scores.csv</code>.</p>
+<h2 id="key-settings">Key settings</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rank Order</td>
+<td>Highest First: the largest score survives. Lowest First: the smallest survives. A tie lets the earlier input row survive longer</td>
+</tr>
+<tr>
+<td>Max Items</td>
+<td>the course supports 1 to 6 marbles; more rows keep the six best for the ranking and add a Data Warning</td>
+</tr>
+<tr>
+<td>First Exit Seconds</td>
+<td>time from the end of the intro to the first exit (demo: 3.40 s)</td>
+</tr>
+<tr>
+<td>Seconds Per Exit</td>
+<td>spacing of later exits (demo: 1.65 s)</td>
+</tr>
+<tr>
+<td>Outro Seconds</td>
+<td>hold after the winner leaves the funnel (demo: 1.25 s)</td>
+</tr>
+<tr>
+<td>Loop Ending</td>
+<td>return to the opening frame</td>
+</tr>
+<tr>
+<td>Display Scale</td>
+<td>sizes the funnel and the marbles together</td>
+</tr>
+<tr>
+<td>Orbit Degrees</td>
+<td>camera travel</td>
+</tr>
+<tr>
+<td>Lift Winner</td>
+<td>the winner rises out of the funnel and hovers over it</td>
+</tr>
+</tbody>
+</table>
+<p>The supplied course holds six Chaos simulations recorded at 120 Hz, one per supported row count. The presentation assigns rows to the recorded paths by survival rank and interpolates the sampled position and rotation, so the same scores always give the same winner in Play, when scrubbing backward and in a rendered movie. The saved demo plays from the course asset and needs no editor scripts at runtime.</p>
+<h2 id="blueprint">Blueprint</h2>
+<p><strong>Get Exit Time</strong> (by sorted row index), <strong>Get Contenders At Time</strong>, <strong>Get Winner At Time</strong> and <strong>Get Physics Frame At Time</strong>. Use <strong>Set Time</strong> to seek: for example 5.10 s in the supplied round shows two contenders and 7.00 s shows Azure named as winner.</p><div class="pn"><a href="Map_Stage.html">&larr; Map Stage</a><a href="Quantity.html">Accumulator and Lap &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

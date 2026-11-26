@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Looks: themes, label styles and Shorts - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="index.html">Home and Quick Start</a><a href="Data.html">Data: the CSV guide</a><a href="Sequencer.html">Sequencer</a><a href="Looks.html" class="cur">Looks: themes, label styles and Shorts</a><a href="Rendering.html">Rendering</a><h4>Formats</h4><a href="Formats/index.html">All formats</a><a href="Formats/Ranked_Columns.html">Ranked Column Race</a><a href="Formats/Height_and_Scale.html">Height and scale comparisons</a><a href="Formats/Unit_Piles.html">Unit piles and gold total</a><a href="Formats/Versus.html">Versus and Versus Chapters</a><a href="Formats/Bar_Chart_Race.html">Bar Chart Race</a><a href="Formats/Speed_Race.html">Speed Race and Speed Episodes</a><a href="Formats/Real_Time_Race.html">Real-Time Race</a><a href="Formats/Radius_Rings.html">Radius Rings</a><a href="Formats/Map_Stage.html">Map Stage</a><a href="Formats/Marble_Elimination.html">Marble Elimination</a><a href="Formats/Quantity.html">Accumulator and Lap</a><a href="Formats/Spec_Card.html">Spec Card</a><a href="Formats/Environments.html">Environment demos</a><h4>Reference</h4><a href="API.html">Blueprint API reference</a><a href="FAQ.html">FAQ and troubleshooting</a><a href="Credits.html">Credits and licenses</a></nav><main><h1 id="looks-themes-label-styles-and-shorts">Looks: themes, label styles and Shorts</h1>
+<div class="toc"><b>On this page</b><ul><li><a href="#themes">Themes</a></li><li><a href="#time-of-day">Time of day</a></li><li><a href="#label-styles">Label styles</a></li><li><a href="#shorts-square-and-timing">Shorts, square and timing</a></li><li><a href="#your-own-level-and-camera-path">Your own level and camera path</a></li></ul></div>
+<h2 id="themes">Themes</h2>
+<p>A <strong>Theme</strong> (<strong>Comparison | Theme</strong>) brings two things:</p>
+<ul>
+<li><strong>The look:</strong> column and card meshes, materials, fonts, sizes, spotlights and grade. They are copied onto the actor's own settings, so you can change any of them afterwards. <strong>Apply Theme</strong> copies the theme's look again.</li>
+<li><strong>The set:</strong> lights, sky light, sky, floor, fog and backdrop, built around the comparison. It moves with the actor and rides along with the Speed Race camera. Untick <strong>Build Set</strong> to light your own level instead.</li>
+</ul>
+<p>Drop the actor into an empty level, pick a theme, and the scene is complete. No theme yet? The comparison shows its plain look: grey boxes in a lit level, unlit ones in an empty level. That is normal: pick a theme. A Basic level's own sun competes with the theme's set, so start from an Empty Level, or untick Build Set to keep your own lights.</p>
+<table>
+<thead>
+<tr>
+<th>Theme set</th>
+<th>Character</th>
+<th>Demo map</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Studio Glass</td>
+<td>bright glass studio, the default</td>
+<td><code>L_CK_StudioGlass</code></td>
+</tr>
+<tr>
+<td>Arena Night</td>
+<td>dark, spotlit</td>
+<td><code>L_CK_ArenaNight</code></td>
+</tr>
+<tr>
+<td>Classic City / Classic Skyline (Cumulus, Cirrus, Overcast, Blue, Dusk)</td>
+<td>street-level city under different skies</td>
+<td><code>L_CK_ClassicSkyline_Cumulus</code>, <code>L_CK_ClassicSkyline_Dusk</code></td>
+</tr>
+<tr>
+<td>Open Plain Day, Alpine, Prairie</td>
+<td>open terrain built from public elevation and aerial data</td>
+<td><code>L_CK_EnvironmentLadder_OpenPlain</code>, <code>L_CK_OpenPlainAlpine</code>, <code>L_CK_OpenPlainPrairie</code></td>
+</tr>
+<tr>
+<td>Deep Space</td>
+<td>stars and void</td>
+<td><code>L_CK_DeepSpace</code></td>
+</tr>
+<tr>
+<td>Flat Strip, Dark Gloss, Grey Ruler</td>
+<td>plain graphic looks</td>
+<td><code>L_CK_FlatStrip</code></td>
+</tr>
+<tr>
+<td>City Street, Ocean Surface, Stadium Track, Stadium Crowd, Warehouse</td>
+<td>environment demos</td>
+<td>see <a href="Formats/Environments.html">Environment demos</a></td>
+</tr>
+</tbody>
+</table>
+<p><img alt="The same comparison in Studio Glass, Arena Night and Classic Skyline" src="img/looks_theme_triptych.jpg" /></p>
+<p><strong>Topic</strong> (<strong>Comparison | Theme</strong>): type what the video is about ("planets", "football", "buildings"). <strong>Suggested Theme</strong> shows the best match and <strong>Use Suggested Theme</strong> applies it. Each theme's Topics list is editable.</p>
+<p><strong>Your own theme:</strong> style a comparison, create a data asset of class <strong>CK Theme</strong>, set it as the <strong>Theme</strong>, put back the look edits you want to keep (setting a theme copies its look), then press <strong>Save Look To Theme</strong> and save the asset. The set (lights, props, sky, fog) is edited in the asset itself.</p>
+<p>All meshes, materials and fonts stay plain properties (<strong>Look | Column</strong>, <strong>Look | Label</strong>, <strong>Overlay</strong>, <strong>Grade</strong>). <strong>Item Material</strong> puts one material on every item mesh, for a silhouette look.</p>
+<h2 id="time-of-day">Time of day</h2>
+<p><strong>Time Of Day</strong> (<strong>Comparison | Theme</strong>, hours, -1 = the theme's sun) moves the set's sun along a clear day: low and warm at 6 and 18, high and white at noon. Each comparison actor has its own. For a per-item sun add a <code>time_of_day</code> column (or <strong>Time Of Day</strong> in a CKItem DataTable): 7 morning, 12 noon, 17 evening. Blank or -1 inherits the actor's setting; an invalid hour is reported and inherits. <strong>Time Of Day Fade</strong> blends the sun as the next item comes into view. <strong>Set Time Of Day</strong> changes the inherited setting from Blueprint without a rebuild. This is a clear-day sun control, not a night sky simulation, and it needs a directional light in the theme's set.</p>
+<h2 id="label-styles">Label styles</h2>
+<p><strong>Label Style</strong> (<strong>Look | Label</strong>):</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>What it is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Card</td>
+<td>a 3D card over each item: rank, name, counting value, flag</td>
+</tr>
+<tr>
+<td>Lower Third</td>
+<td>a broadcast strip for the item in focus: name, value, second unit, tags</td>
+</tr>
+<tr>
+<td>Museum</td>
+<td>title, value, tags and the item's description lines</td>
+</tr>
+<tr>
+<td>Spec Sheet</td>
+<td>name, value, then rank, year, category, status and source rows</td>
+</tr>
+</tbody>
+</table>
+<p><img alt="The four label styles on the same item" src="img/looks_label_styles.jpg" /></p>
+<ul>
+<li><strong>Letterbox</strong> (Lower Third, 16:9): cinema bars at <strong>Letterbox Aspect</strong>; the source line moves into the bottom bar. Each bar is at least 10 % of the frame so its text stays inside the safe area.</li>
+<li><strong>Show Tags</strong> adds category, confidence and evidence as a tag line.</li>
+<li><strong>Second unit</strong> (<strong>Values</strong>): <strong>Secondary Unit Factor</strong> 3.28084 and <strong>Secondary Suffix</strong> " ft" shows "828 m / 2,717 ft".</li>
+<li>Numbers count up in <strong>Count Seconds</strong> and keep one unit while counting (no "999 K" jumping to "1.0 M"). <strong>Value Reveal</strong> picks Roll, Count or Instant.</li>
+<li><strong>Digit Grouping</strong> switches between 1,234 and 1 234 and 1.234,5.</li>
+</ul>
+<h2 id="shorts-square-and-timing">Shorts, square and timing</h2>
+<p><strong>Aspect</strong> (<strong>Comparison | Camera</strong>) is <strong>16:9 (YouTube)</strong>, <strong>9:16 (Shorts)</strong> or <strong>1:1</strong>. Cards, overlay and framing adapt. In 9:16 everything stays inside the <strong>Shorts Safe Box</strong>, clear of the platform's buttons and caption; tick <strong>Show Safe Area</strong> to see it while you lay out.</p>
+<p><img alt="A 9:16 frame with the safe area outlined" src="img/looks_shorts_safe_area.jpg" /></p>
+<ul>
+<li><strong>Apply Long Form Timing</strong> and <strong>Apply Shorts Timing</strong> (ranked rows) set the pacing and fit the sequence.</li>
+<li><strong>End Question</strong> adds a closing card ("Which one surprised you?"). <strong>Loop Ending</strong> returns the camera to the first frame so the Short loops seamlessly.</li>
+<li><strong>Style Seed</strong> with <strong>Apply Style Seed</strong>: a different camera angle, height, rhythm and closing orbit per seed, so two videos from the kit do not look alike. The same seed always gives the same result.</li>
+<li><strong>Brand</strong> (<strong>Comparison | Brand</strong>): <strong>Brand Logo</strong>, <strong>Brand Text</strong>, <strong>Brand Corner</strong> put your signature on the picture. <strong>Backdrop Text</strong> and <strong>Ticker Text</strong> add large letters or a scrolling band in the set.</li>
+</ul>
+<h2 id="your-own-level-and-camera-path">Your own level and camera path</h2>
+<p>Place the comparison in your existing level and untick <strong>Build Set</strong>. Your lights, scenery and other actors stay unchanged, and the selected theme still supplies the comparison's look. Under <strong>Comparison | Own Level</strong>:</p>
+<ul>
+<li><strong>Custom Ground</strong> optionally adds your ground mesh, material slots and instance transforms, in centimetres relative to the comparison actor.</li>
+<li><strong>Camera Path Actor</strong>: an actor with a Spline Component of at least two points. The camera follows the spline's position and forward direction at constant distance per second. <strong>Camera Path Start Hold</strong> and <strong>Camera Path End Hold</strong> reserve seconds for the end views. An invalid path falls back to the generated camera and Rebuild reports it in Data Warnings. <strong>Set Camera Path Actor</strong> does the same from Blueprint; pass None to restore the generated camera.</li>
+</ul><div class="pn"><a href="Sequencer.html">&larr; Sequencer</a><a href="Rendering.html">Rendering &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

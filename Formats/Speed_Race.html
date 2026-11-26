@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Speed Race and Speed Episodes - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="../index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="../index.html">Home and Quick Start</a><a href="../Data.html">Data: the CSV guide</a><a href="../Sequencer.html">Sequencer</a><a href="../Looks.html">Looks: themes, label styles and Shorts</a><a href="../Rendering.html">Rendering</a><h4>Formats</h4><a href="index.html">All formats</a><a href="Ranked_Columns.html">Ranked Column Race</a><a href="Height_and_Scale.html">Height and scale comparisons</a><a href="Unit_Piles.html">Unit piles and gold total</a><a href="Versus.html">Versus and Versus Chapters</a><a href="Bar_Chart_Race.html">Bar Chart Race</a><a href="Speed_Race.html" class="cur">Speed Race and Speed Episodes</a><a href="Real_Time_Race.html">Real-Time Race</a><a href="Radius_Rings.html">Radius Rings</a><a href="Map_Stage.html">Map Stage</a><a href="Marble_Elimination.html">Marble Elimination</a><a href="Quantity.html">Accumulator and Lap</a><a href="Spec_Card.html">Spec Card</a><a href="Environments.html">Environment demos</a><h4>Reference</h4><a href="../API.html">Blueprint API reference</a><a href="../FAQ.html">FAQ and troubleshooting</a><a href="../Credits.html">Credits and licenses</a></nav><main><h1 id="speed-race-and-speed-episodes">Speed Race and Speed Episodes</h1>
+<p><strong>What it shows.</strong> Every item runs in its own lane at its true share of <strong>Fastest Screen Speed</strong>, with a 3-2-1-GO countdown, camera cuts, a leaderboard and a winner card. The camera rides each racer, slowest first.</p>
+<p><img alt="Racers in their lanes during a Multi Angle shot" src="img/format_speed_race.jpg" /></p>
+<p><strong>Actor:</strong> CK Speed Race. <strong>Demo maps:</strong> <code>L_CK_SpeedRace_StudioGlass</code> (and <code>_Shorts</code>), <code>L_CK_SpeedEpisodes_StudioGlass</code>, <code>L_CK_SpeedDust_StudioGlass</code>.</p>
+<p>Item values are the speeds. A racer's <strong>mesh</strong> keeps its real size; a skeletal mesh with a run <code>animation</code> that has root motion is timed to its speed (no foot sliding) and turned to run along the lane. An in-place loop plays at its own rate. The theme's set travels with the camera by itself; put any pieces of your own in <strong>Travel With Camera</strong> so they ride along too.</p>
+<h2 id="key-settings">Key settings</h2>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fastest Screen Speed</strong> (<code>FastestScreenSpeed</code>)</td>
+<td>2500</td>
+<td>Screen speed of the fastest racer, cm/s; every other racer moves at its true share of it. <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Lane Spacing</strong> (<code>LaneSpacing</code>)</td>
+<td>520</td>
+<td>- <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Racer Mesh</strong> (<code>RacerMesh</code>)</td>
+<td>-</td>
+<td>Racer used when a row has no Mesh: empty = a column token in the kit look. Front faces +X. <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Overtake</strong> (<code>bOvertake</code>)</td>
+<td>false</td>
+<td>Overtake: each faster racer sets off a little later and catches the racer the camera rides with right at the hand-over, so it overtakes into frame and the camera stays with the new leader (no pan across empty track). Speeds keep their true ratios on screen; distances no longer compare. <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Trail Seconds</strong> (<code>TrailSeconds</code>)</td>
+<td>0.6</td>
+<td>Streak on the ground behind every racer, as long as the distance it covers in this time (0 = none). Line Material. <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Dust Amount</strong> (<code>DustAmount</code>)</td>
+<td>0</td>
+<td>Dust kicked up behind every running racer (the car-commercial payoff): puffs that rise, grow and fade over Dust Seconds; 0 = none, 1 = ten puffs per racer. A pure function of time, so scrubbing and Movie Render Queue give the same frames. <em>(Details: Comparison | Race)</em></td>
+</tr>
+<tr>
+<td><strong>Seconds Per Item</strong> (<code>SecondsPerItem</code>)</td>
+<td>5</td>
+<td>Time the camera rides with each racer. <em>(Details: Comparison | Timing)</em></td>
+</tr>
+<tr>
+<td><strong>Transition Seconds</strong> (<code>TransitionSeconds</code>)</td>
+<td>1.2</td>
+<td>Hand-over from one racer to the next (inside SecondsPerItem). <em>(Details: Comparison | Timing)</em></td>
+</tr>
+<tr>
+<td><strong>Countdown Seconds</strong> (<code>CountdownSeconds</code>)</td>
+<td>3</td>
+<td>3-2-1-GO before the start (the last part of the intro). <em>(Details: Comparison | Timing)</em></td>
+</tr>
+<tr>
+<td><strong>Camera Distance</strong> (<code>CameraDistance</code>)</td>
+<td>900</td>
+<td>Closest the camera gets, cm. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Camera Angle</strong> (<code>CameraAngle</code>)</td>
+<td>24</td>
+<td>Degrees the camera sits behind the racer. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Focus F Stop</strong> (<code>FocusFStop</code>)</td>
+<td>2.8</td>
+<td>f-stop of a depth of field focused on the racer being filmed (the 2D layer stays sharp); 0 = everything sharp. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Speed Blur</strong> (<code>SpeedBlur</code>)</td>
+<td>1</td>
+<td>Motion blur that grows with the speed of the racer being filmed: at 1 the shutter runs 0.15 (slowest) to 0.6 (fastest); 0 = no motion blur. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Show Leaderboard</strong> (<code>bShowLeaderboard</code>)</td>
+<td>false</td>
+<td>Mini leaderboard in the top-left corner while the race runs: position, name and value, the racer being filmed marked (it takes the last row when it runs further back). <em>(Details: Comparison | Overlay)</em></td>
+</tr>
+<tr>
+<td><strong>Leaderboard Rows</strong> (<code>LeaderboardRows</code>)</td>
+<td>5</td>
+<td>Rows of the leaderboard (9:16, and 16:9 over the world cards, show at most 3). <em>(Details: Comparison | Overlay)</em></td>
+</tr>
+<tr>
+<td><strong>Travel With Camera</strong> (<code>TravelWithCamera</code>)</td>
+<td>-</td>
+<td>Stage pieces that travel with the camera along the track (backdrop, lights, fog), so the set never runs out. <em>(Details: Comparison | Track)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="speed-episodes">Speed Episodes</h2>
+<p><strong>Episodes</strong> (<strong>Comparison | Camera</strong>): the race runs once per entry, each with its own <strong>Camera</strong> and an optional <strong>Title</strong> card in the <strong>Episode Gap Seconds</strong> between runs. Camera styles:</p>
+<table>
+<thead>
+<tr>
+<th>Style</th>
+<th>What it films</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Multi Angle</td>
+<td>cut shots of each racer</td>
+</tr>
+<tr>
+<td>Side</td>
+<td>one lateral tracking shot</td>
+</tr>
+<tr>
+<td>Lead Tracking</td>
+<td>stays on the leader; starts are staggered so the lead changes</td>
+</tr>
+<tr>
+<td>Passby</td>
+<td>a low camera on the lane edge, each racer flying past</td>
+</tr>
+<tr>
+<td>Top Down</td>
+<td>overhead, cards facing up</td>
+</tr>
+<tr>
+<td>POV</td>
+<td>riding with each racer: from its eyes through a socket named Camera on its mesh if it has one, else over its shoulder</td>
+</tr>
+</tbody>
+</table>
+<p>A typical long-form run: Multi Angle, Passby, Top Down, POV. Demo: <code>L_CK_SpeedEpisodes_StudioGlass</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Episodes</strong> (<code>Episodes</code>)</td>
+<td>-</td>
+<td>The race runs once per episode, each filmed its own way: Multi Angle -&gt; Passby -&gt; Top Down -&gt; POV replays the same data as a longer video. Empty = one Multi Angle run. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Episode Gap Seconds</strong> (<code>EpisodeGapSeconds</code>)</td>
+<td>1.5</td>
+<td>Between episodes the field lines up at the start again under the next episode's title. <em>(Details: Comparison | Timing)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips">Tips</h2>
+<ul>
+<li><strong>Focus F Stop</strong> sets the depth of field on the racer in focus (higher = more in focus); <strong>Speed Blur</strong> scales motion blur with the racer's speed (0 = off).</li>
+<li><strong>Show Leaderboard</strong> adds a top-left table of the leading racers; the racer in focus is always listed.</li>
+<li><strong>Draw Track</strong> off when your level or theme supplies the floor. <strong>Line Material</strong> is for lane lines and the finish stripe.</li>
+<li>For true finish times instead of speed ratios, see <a href="Real_Time_Race.html">Real-Time Race</a>.</li>
+</ul><div class="pn"><a href="Bar_Chart_Race.html">&larr; Bar Chart Race</a><a href="Real_Time_Race.html">Real-Time Race &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FAQ and troubleshooting - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="index.html">Home and Quick Start</a><a href="Data.html">Data: the CSV guide</a><a href="Sequencer.html">Sequencer</a><a href="Looks.html">Looks: themes, label styles and Shorts</a><a href="Rendering.html">Rendering</a><h4>Formats</h4><a href="Formats/index.html">All formats</a><a href="Formats/Ranked_Columns.html">Ranked Column Race</a><a href="Formats/Height_and_Scale.html">Height and scale comparisons</a><a href="Formats/Unit_Piles.html">Unit piles and gold total</a><a href="Formats/Versus.html">Versus and Versus Chapters</a><a href="Formats/Bar_Chart_Race.html">Bar Chart Race</a><a href="Formats/Speed_Race.html">Speed Race and Speed Episodes</a><a href="Formats/Real_Time_Race.html">Real-Time Race</a><a href="Formats/Radius_Rings.html">Radius Rings</a><a href="Formats/Map_Stage.html">Map Stage</a><a href="Formats/Marble_Elimination.html">Marble Elimination</a><a href="Formats/Quantity.html">Accumulator and Lap</a><a href="Formats/Spec_Card.html">Spec Card</a><a href="Formats/Environments.html">Environment demos</a><h4>Reference</h4><a href="API.html">Blueprint API reference</a><a href="FAQ.html" class="cur">FAQ and troubleshooting</a><a href="Credits.html">Credits and licenses</a></nav><main><h1 id="faq-and-troubleshooting">FAQ and troubleshooting</h1>
+<div class="toc"><b>On this page</b><ul><li><a href="#data">Data</a></li><li><a href="#sequencer-and-render">Sequencer and render</a></li><li><a href="#packaged-builds">Packaged builds</a></li><li><a href="#content">Content</a></li><li><a href="#engine-versions">Engine versions</a></li><li><a href="#support">Support</a></li></ul></div>
+<h2 id="data">Data</h2>
+<p><strong>My CSV is not found.</strong> A relative path is read from your project folder first, then from the plugin folder. Use the full path if the file lives elsewhere. Look at <strong>Data Warnings</strong>: the first line says what was read.</p>
+<p><strong>The kit picked the wrong columns.</strong> Type the header (or its 1-based number) into <strong>Csv Label Column</strong> and <strong>Csv Value Column</strong>. Data Warnings starts with a <em>CSV read</em> line naming the columns it took.</p>
+<p><strong>Numbers like 1,234 read as 1.234.</strong> If every number in a <code>;</code> file looks like <code>1,234</code>, the comma is read as a decimal mark. Write the numbers with a clear decimal point, or use a comma-separated file. See <a href="Data.html">Data</a>.</p>
+<p><strong>Rows are missing.</strong> Open <strong>Data Warnings</strong>. Rows without a number, total rows, groups of countries (World, High income, ...) and placeholders (<code>n/a</code>, <code>-</code>) are left out on purpose. <strong>Max Items</strong> may also cap the list.</p>
+<p><strong>A country has no flag.</strong> Add its spelling to a row's <strong>Names</strong> in <strong>DT_CK_Flags</strong>, separated by <code>|</code>. The first name is the display name.</p>
+<p><strong>The list is too long for one video.</strong> Set <strong>Max Items</strong>.</p>
+<h2 id="sequencer-and-render">Sequencer and render</h2>
+<p><strong>I changed the data and the sequence is too short or too long.</strong> Press <strong>Fit Sequence</strong> again after every change to data, timing or aspect.</p>
+<p><strong>My retiming disappeared.</strong> Fit Sequence rewrites the <strong>Time</strong> track. Retime after your last Fit Sequence, or use the <code>hold</code> column.</p>
+<p><strong>The render is much slower than the preview.</strong> Check that <strong>Virtual Shadow Maps</strong> is on (Project Settings &gt; Rendering). Without them scenes render about three times slower. Also see <a href="Rendering.html">Rendering</a> for editorless rendering and Fully Load Used Textures.</p>
+<p><strong>The Shorts render is cropped.</strong> The actor's <strong>Aspect</strong> and the render preset must both be 9:16.</p>
+<p><strong>Fit Sequence warns about fast cuts.</strong> Slow the timing until the warning in <strong>Data Status</strong> goes (no cut faster than three per second).</p>
+<h2 id="packaged-builds">Packaged builds</h2>
+<p><strong>The packaged game shows old data.</strong> CSV files are not cooked; a packaged game plays the rows saved with the level. Open the level in the editor, check Data Warnings, save it, then package again. Or use a <strong>Data Table</strong> (row struct CKItem), which is cooked. Pictures given as file paths are not cooked either: import them as textures and use their asset paths, or add their folder under Project Settings &gt; Packaging &gt; Additional Non-Asset Directories To Copy.</p>
+<h2 id="content">Content</h2>
+<p><strong>I cannot see the demo maps.</strong> Enable <strong>Show Plugin Content</strong> in the Content Browser settings, then open <code>Plugins &gt; Comparison Kit &gt; Maps</code>.</p>
+<p><strong>The set is in my way.</strong> Untick <strong>Build Set</strong> to keep your own level's lights and scenery.</p>
+<p><strong>I changed something through Blueprint and nothing happened.</strong> Call <strong>Rebuild</strong>. The Details panel rebuilds by itself, Blueprint changes do not.</p>
+<h2 id="engine-versions">Engine versions</h2>
+<p>The same features run on every listed engine. Differences come from the engine's own Text3D plugin:</p>
+<table>
+<thead>
+<tr>
+<th>Engine</th>
+<th>Subtitles and the description lines on label cards</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>5.5 to 5.8</td>
+<td>A long line wraps (up to three lines on a card), then scales down if it still does not fit.</td>
+</tr>
+<tr>
+<td>5.3 and 5.4</td>
+<td>Text3D cannot wrap: a long line is scaled down to fit on one line. Short text looks the same.</td>
+</tr>
+</tbody>
+</table>
+<p>Names, values and titles fit the same way on every engine (scaled down when too wide).</p>
+<p>Text3D before 5.6 is the older Beta version of the plugin; the kit sets it up the same way on every engine.</p>
+<h2 id="support">Support</h2>
+<p>Open an issue on the support page with your engine version, the format, and the text of <strong>Data Warnings</strong> if the problem is about data.</p><div class="pn"><a href="API.html">&larr; Blueprint API reference</a><a href="Credits.html">Credits and licenses &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

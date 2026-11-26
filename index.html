@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Comparison Kit documentation - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="index.html" class="cur">Home and Quick Start</a><a href="Data.html">Data: the CSV guide</a><a href="Sequencer.html">Sequencer</a><a href="Looks.html">Looks: themes, label styles and Shorts</a><a href="Rendering.html">Rendering</a><h4>Formats</h4><a href="Formats/index.html">All formats</a><a href="Formats/Ranked_Columns.html">Ranked Column Race</a><a href="Formats/Height_and_Scale.html">Height and scale comparisons</a><a href="Formats/Unit_Piles.html">Unit piles and gold total</a><a href="Formats/Versus.html">Versus and Versus Chapters</a><a href="Formats/Bar_Chart_Race.html">Bar Chart Race</a><a href="Formats/Speed_Race.html">Speed Race and Speed Episodes</a><a href="Formats/Real_Time_Race.html">Real-Time Race</a><a href="Formats/Radius_Rings.html">Radius Rings</a><a href="Formats/Map_Stage.html">Map Stage</a><a href="Formats/Marble_Elimination.html">Marble Elimination</a><a href="Formats/Quantity.html">Accumulator and Lap</a><a href="Formats/Spec_Card.html">Spec Card</a><a href="Formats/Environments.html">Environment demos</a><h4>Reference</h4><a href="API.html">Blueprint API reference</a><a href="FAQ.html">FAQ and troubleshooting</a><a href="Credits.html">Credits and licenses</a></nav><main><h1 id="comparison-kit-documentation">Comparison Kit documentation</h1>
+<p><strong>Data-driven 3D comparison videos in Unreal Engine 5.3 to 5.8.</strong> Fill a CSV or a DataTable, press <strong>Fit Sequence</strong>, render with Movie Render Queue. No code.</p>
+<p><img alt="Comparison Kit: ranked columns, height lineups, versus duels and speed races from one plugin" src="img/home_hero.jpg" /></p>
+<p>Comparison Kit ships 20 video formats, each with a demo map you can play in one click: ranked column races, height and scale comparisons, unit piles, versus duels, bar chart races, speed races, radius rings, a map stage, marble elimination and more. Every format is one actor in your level; everything is set in its <strong>Details panel</strong>, under the category <strong>Comparison</strong>.</p>
+<h2 id="quick-start-5-minutes">Quick Start (5 minutes)</h2>
+<h3 id="a-watch-a-finished-demo">A. Watch a finished demo</h3>
+<ol>
+<li>Enable <strong>Show Plugin Content</strong> in the Content Browser settings (the plugin's content is hidden by default).</li>
+<li>Open <code>Plugins &gt; Comparison Kit &gt; Maps</code> and double-click <strong>L_CK_StudioGlass</strong>.</li>
+<li>Press <strong>Play</strong>. The comparison starts by itself (<strong>Auto Play</strong>) and the camera follows the data.</li>
+</ol>
+<p><img alt="The Content Browser with Show Plugin Content enabled and the Maps folder open" src="img/quickstart_content_browser.jpg" /></p>
+<p>Every format has its own map: see <a href="Formats/index.html">Formats</a>. Most are in the bright <strong>Studio Glass</strong> set and have a 9:16 copy whose name ends in <code>_Shorts</code>.</p>
+<h3 id="b-make-your-own-video">B. Make your own video</h3>
+<ol>
+<li>Open the demo map closest to what you want, then <strong>File &gt; Save Current Level As</strong> into your project. (Or place a CK actor in your own level, for example <strong>CK Comparison Row</strong>, from the Place Actors panel.)</li>
+<li>Select the comparison actor in the Outliner. Everything is in the Details panel under <strong>Comparison</strong>.</li>
+<li>Under <strong>Comparison | Data</strong>, set <strong>Csv File</strong> to your table. The actor rebuilds the moment you set it. A minimal file looks like this:</li>
+</ol>
+<pre><code class="language-csv">label,value,country
+Brazil,216,BR
+Japan,124,JP
+Egypt,112,EG
+</code></pre>
+<p>To watch it with <strong>Play</strong> before you make a sequence, tick <strong>Auto Play</strong> (under <strong>Comparison | Playback</strong>): Time runs by itself and the actor's camera takes over the view. A placed actor starts with Auto Play off, because a Level Sequence drives it in the normal workflow. An empty level (<strong>File &gt; New Level &gt; Basic</strong>) keeps template characters and blocks out of the shot.</p>
+<ol start="4">
+<li>Set <strong>Title</strong>, <strong>Value Suffix</strong> and <strong>Decimals</strong> to taste. Read <strong>Data Warnings</strong>: it lists everything the kit decided about your file. See <a href="Data.html">Data</a>.</li>
+<li>Press <strong>Fit Sequence</strong> (under <strong>Comparison</strong>). The kit creates a Level Sequence next to your level, keys the <strong>Time</strong> track from 0 to the end of the data and adds the camera cuts. Open the sequence and scrub: the whole scene follows. See <a href="Sequencer.html">Sequencer</a>.</li>
+<li>Render with <strong>Movie Render Queue</strong>: add the sequence and pick a preset from <code>Plugins &gt; Comparison Kit &gt; Render</code>. Presets exist for 16:9, 9:16 Shorts, 1:1 and 4K. See <a href="Rendering.html">Rendering</a>.</li>
+</ol>
+<p><img alt="The comparison actor selected, the Details panel filtered to Fit Sequence: the Fit Sequence button and the timing buttons" src="img/quickstart_details_fit_sequence.jpg" /></p>
+<blockquote>
+<p>The camera, cards, overlay and timing are all driven by one value, <strong>Time</strong>. That is why scrubbing, Sequencer and a rendered movie always match.</p>
+</blockquote>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Unreal Engine 5.3, 5.4, 5.5, 5.6, 5.7 or 5.8 on Windows. Blueprint-only projects work: the plugin ships compiled.</li>
+<li>The plugin uses the engine's <strong>Text3D</strong> plugin (enabled with it) for every label and title.</li>
+<li>The looks are built for the project defaults: <strong>Lumen</strong> and <strong>Virtual Shadow Maps</strong> (Project Settings &gt; Rendering). Both are on in every project created from the New Project dialog. Without Virtual Shadow Maps the scenes still work but render about three times slower.</li>
+</ul>
+<h2 id="where-to-go-next">Where to go next</h2>
+<table>
+<thead>
+<tr>
+<th>I want to...</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Use my own numbers</td>
+<td><a href="Data.html">Data</a></td>
+</tr>
+<tr>
+<td>Retime, add my own camera or tracks</td>
+<td><a href="Sequencer.html">Sequencer</a></td>
+</tr>
+<tr>
+<td>Pick a format</td>
+<td><a href="Formats/index.html">Formats</a></td>
+</tr>
+<tr>
+<td>Change the look, the set, label styles, 9:16</td>
+<td><a href="Looks.html">Looks</a></td>
+</tr>
+<tr>
+<td>Render 16:9 and Shorts</td>
+<td><a href="Rendering.html">Rendering</a></td>
+</tr>
+<tr>
+<td>Drive it from Blueprint</td>
+<td><a href="API.html">Blueprint API</a></td>
+</tr>
+<tr>
+<td>Something went wrong</td>
+<td><a href="FAQ.html">FAQ and troubleshooting</a></td>
+</tr>
+<tr>
+<td>Licenses and data sources</td>
+<td><a href="Credits.html">Credits</a></td>
+</tr>
+</tbody>
+</table><hr><p><b>Support:</b> found a problem or have a question? <a href="https://github.com/josephs-assets/ComparisonKit/issues">Open an issue</a> and include your Unreal Engine version, the format, and the Data Warnings text from the comparison actor if the problem is about data.</p><div class="pn"><span></span><a href="Data.html">Data: the CSV guide &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

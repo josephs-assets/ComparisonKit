@@ -1,0 +1,624 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Blueprint API reference - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="index.html">Home and Quick Start</a><a href="Data.html">Data: the CSV guide</a><a href="Sequencer.html">Sequencer</a><a href="Looks.html">Looks: themes, label styles and Shorts</a><a href="Rendering.html">Rendering</a><h4>Formats</h4><a href="Formats/index.html">All formats</a><a href="Formats/Ranked_Columns.html">Ranked Column Race</a><a href="Formats/Height_and_Scale.html">Height and scale comparisons</a><a href="Formats/Unit_Piles.html">Unit piles and gold total</a><a href="Formats/Versus.html">Versus and Versus Chapters</a><a href="Formats/Bar_Chart_Race.html">Bar Chart Race</a><a href="Formats/Speed_Race.html">Speed Race and Speed Episodes</a><a href="Formats/Real_Time_Race.html">Real-Time Race</a><a href="Formats/Radius_Rings.html">Radius Rings</a><a href="Formats/Map_Stage.html">Map Stage</a><a href="Formats/Marble_Elimination.html">Marble Elimination</a><a href="Formats/Quantity.html">Accumulator and Lap</a><a href="Formats/Spec_Card.html">Spec Card</a><a href="Formats/Environments.html">Environment demos</a><h4>Reference</h4><a href="API.html" class="cur">Blueprint API reference</a><a href="FAQ.html">FAQ and troubleshooting</a><a href="Credits.html">Credits and licenses</a></nav><main><h1 id="blueprint-api-reference">Blueprint API reference</h1>
+<div class="toc"><b>On this page</b><ul><li><a href="#1-every-comparison-actor-data-timing-theme-camera-playback">1. Every comparison actor: data, timing, theme, camera, playback</a></li><li><a href="#2-ranked-rows-heights-unit-piles-scale-ladder-parade">2. Ranked rows, heights, unit piles, scale ladder, parade</a></li><li><a href="#3-versus">3. Versus</a></li><li><a href="#4-speed-race-and-real-time-race">4. Speed race and real-time race</a></li><li><a href="#5-radius-rings">5. Radius rings</a></li><li><a href="#6-map-stage">6. Map stage</a></li><li><a href="#7-marble-elimination">7. Marble elimination</a></li><li><a href="#8-accumulator-and-lap">8. Accumulator and lap</a></li><li><a href="#9-themes">9. Themes</a></li><li><a href="#10-data-and-number-format-library">10. Data and number-format library</a></li></ul></div>
+<p>Every Blueprint node the kit adds, grouped by what you are doing. Node names are the names you type in the Blueprint search box; the text is the same as the Details and node tooltips. You do not need any code: <em>Function</em> nodes have white execution pins, <em>Getter</em> nodes are green pure nodes, <em>Event / override</em> entries are events you add in a Blueprint child (Event Graph &gt; right-click, or Functions &gt; Override), and <em>Event dispatchers</em> are bound with <strong>Bind Event</strong> or the green box in the Details panel.</p>
+<p><strong>52 Blueprint nodes</strong> (functions and events). Developer tooling and internal helpers are not listed.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Nodes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. Every comparison actor: data, timing, theme, camera, playback</td>
+<td>17</td>
+</tr>
+<tr>
+<td>2. Ranked rows, heights, unit piles, scale ladder, parade</td>
+<td>4</td>
+</tr>
+<tr>
+<td>3. Versus</td>
+<td>1</td>
+</tr>
+<tr>
+<td>4. Speed race and real-time race</td>
+<td>5</td>
+</tr>
+<tr>
+<td>5. Radius rings</td>
+<td>2</td>
+</tr>
+<tr>
+<td>6. Map stage</td>
+<td>2</td>
+</tr>
+<tr>
+<td>7. Marble elimination</td>
+<td>4</td>
+</tr>
+<tr>
+<td>8. Accumulator and lap</td>
+<td>5</td>
+</tr>
+<tr>
+<td>9. Themes</td>
+<td>1</td>
+</tr>
+<tr>
+<td>10. Data and number-format library</td>
+<td>11</td>
+</tr>
+</tbody>
+</table>
+<h2 id="1-every-comparison-actor-data-timing-theme-camera-playback">1. Every comparison actor: data, timing, theme, camera, playback</h2>
+<h3 id="ck-comparison-base">CK Comparison Base</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apply Style Seed</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Writes a seeded variation into this actor's camera and timing settings (camera side, angle and height, lead, entrances, dwell, closing orbit), so two videos from the kit do not share one grammar. The values stay editable.</td>
+</tr>
+<tr>
+<td><strong>Set Camera Path Actor</strong></td>
+<td>Function</td>
+<td>New Path (Actor (object))</td>
+<td>-</td>
+<td>Switches to a buyer spline without editing it. None restores the generated camera.</td>
+</tr>
+<tr>
+<td><strong>Set Time Of Day</strong></td>
+<td>Function</td>
+<td>New Hour (Float)</td>
+<td>-</td>
+<td>Changes the inherited sun hour without rebuilding the scene. -1 restores the theme's original sun.</td>
+</tr>
+<tr>
+<td><strong>Set Theme</strong></td>
+<td>Function</td>
+<td>New Theme (CK Theme (object))</td>
+<td>-</td>
+<td>Switches the theme from a Blueprint or at runtime: copies its look and rebuilds with its set.</td>
+</tr>
+<tr>
+<td><strong>Apply Theme</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Copies the theme's look again (undoes look edits made since).</td>
+</tr>
+<tr>
+<td><strong>Use Suggested Theme</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Save Look To Theme</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Writes this comparison's current look into the Theme asset (save the asset afterwards).</td>
+</tr>
+<tr>
+<td><strong>Get Duration</strong></td>
+<td>Getter (pure)</td>
+<td>-</td>
+<td>Return Value (Float)</td>
+<td>Length of the video, seconds: the format's own timeline plus every item's Hold Seconds (Time plays 0 -&gt; this).</td>
+</tr>
+<tr>
+<td><strong>Fit Timing To Runtime</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Sets the per-item pace (Seconds Per Item, Round Seconds, Seconds Per Period) so the video lasts Target Runtime, then Fit Sequence.</td>
+</tr>
+<tr>
+<td><strong>Get Ocean Surface At World Point</strong></td>
+<td>Getter (pure)</td>
+<td>Point (Vector), At Time (Float)</td>
+<td>Return Value (Transform)</td>
+<td>World-space surface point and orientation for this theme's water at a comparison time.</td>
+</tr>
+<tr>
+<td><strong>Set Time</strong></td>
+<td>Function</td>
+<td>New Time (Float)</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Rebuild</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Reload data and recreate the scene.</td>
+</tr>
+<tr>
+<td><strong>Fit Sequence</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Sets the Sequence's length to this comparison's duration and re-keys its Time track (0 -&gt; duration, linear). With no Sequence (or a demo's sequence on a copy of a demo map) it first makes one next to your level, bound to this actor.</td>
+</tr>
+<tr>
+<td><strong>Get Item Count</strong></td>
+<td>Getter (pure)</td>
+<td>-</td>
+<td>Return Value (Integer)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Item</strong></td>
+<td>Getter (pure)</td>
+<td>Index (Integer)</td>
+<td>Return Value (CK Item)</td>
+<td>Item Index in presentation order (the order the video shows them), e.g. for your own UI or events.</td>
+</tr>
+<tr>
+<td><strong>Get Focused Item</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Integer)</td>
+<td>Index (presentation order) of the item being presented at AtTime, -1 when none is (title, closing shot).</td>
+</tr>
+<tr>
+<td><strong>Load Image File</strong></td>
+<td>Function</td>
+<td>File Path (String)</td>
+<td>Return Value (Texture 2D (object))</td>
+<td>Reads a PNG/JPG/TGA/BMP file into a texture once and keeps it for later calls (empty or unreadable = null).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="2-ranked-rows-heights-unit-piles-scale-ladder-parade">2. Ranked rows, heights, unit piles, scale ladder, parade</h2>
+<h3 id="ck-comparison-row">CK Comparison Row</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Set Environment Stages</strong></td>
+<td>Function</td>
+<td>Stages (Array of CK Environment Stage)</td>
+<td>-</td>
+<td>Replace the environment ladder and rebuild; an empty array restores legacy ground-to-space.</td>
+</tr>
+<tr>
+<td><strong>Apply Long-Form Timing</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Long-form YouTube timing: 4.5 s per item, 3 s title, 7 s outro. Then Fit Sequence.</td>
+</tr>
+<tr>
+<td><strong>Apply Shorts Timing</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Shorts timing: 3.2 s per item, 2 s title, 3.5 s hold on #1, 5 s outro. Then Fit Sequence.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="ck-scale-ladder">CK Scale Ladder</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Frame Meters</strong></td>
+<td>Getter (pure)</td>
+<td>T (Float)</td>
+<td>Return Value (Float)</td>
+<td>Frame height in metres at time T (the zoom), for scripted extras.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-versus">3. Versus</h2>
+<h3 id="ck-versus">CK Versus</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apply Short Chapters</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>-</td>
+<td>Chapters for a Short: 3 s solo per contender, the rounds, a 6 s slow-motion replay, a 3 s POV. Then Fit Sequence.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="4-speed-race-and-real-time-race">4. Speed race and real-time race</h2>
+<h3 id="ck-speed-race">CK Speed Race</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Race Clock</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Float)</td>
+<td>Actual elapsed race seconds at a presentation time, including declared skips.</td>
+</tr>
+<tr>
+<td><strong>Get Racer Place</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer), At Time (Float)</td>
+<td>Return Value (Integer)</td>
+<td>Current place, preserving finish order once racers share the finish line. Ties share a place.</td>
+</tr>
+<tr>
+<td><strong>Is Racer Exhausted</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer), At Time (Float)</td>
+<td>Return Value (Boolean)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Racer Finish Time</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer)</td>
+<td>Return Value (Float)</td>
+<td>Finish seconds, or -1 for a DNF/invalid row or legacy speed-ratio mode.</td>
+</tr>
+<tr>
+<td><strong>Get Racer Distance</strong></td>
+<td>Getter (pure)</td>
+<td>Index (Integer), At Time (Float)</td>
+<td>Return Value (Float)</td>
+<td>Distance racer Index (presentation order) has run at At Time, cm: e.g. to fire an event when a racer passes a mark.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-radius-rings">5. Radius rings</h2>
+<h3 id="ck-radius-comparison">CK Radius Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Ring Point</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer), Angle Degrees (Float)</td>
+<td>Return Value (Vector)</td>
+<td>World-space point on a ring's measured centerline. Angle 0 points along the actor's +X; 90 along +Z.</td>
+</tr>
+<tr>
+<td><strong>Get Scene Radius</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer)</td>
+<td>Return Value (Float)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-map-stage">6. Map stage</h2>
+<h3 id="ck-map-comparison">CK Map Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Country At Time</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Name)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Shape Area Km2</strong></td>
+<td>Getter (pure)</td>
+<td>Country (Name)</td>
+<td>Return Value (Float)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="7-marble-elimination">7. Marble elimination</h2>
+<h3 id="ck-marble-elimination">CK Marble Elimination</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Exit Time</strong></td>
+<td>Getter (pure)</td>
+<td>Item Index (Integer)</td>
+<td>Return Value (Float)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Contenders At Time</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Integer)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Winner At Time</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Text)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Get Physics Frame At Time</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Float)</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="8-accumulator-and-lap">8. Accumulator and lap</h2>
+<h3 id="ck-quantity-comparison">CK Quantity Comparison</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Get Elapsed At Time</strong></td>
+<td>Getter (pure)</td>
+<td>At Time (Float)</td>
+<td>Return Value (Float)</td>
+<td>Shared simulated time at this presentation time.</td>
+</tr>
+<tr>
+<td><strong>Get Amount At Time</strong></td>
+<td>Getter (pure)</td>
+<td>Row (Integer), At Time (Float)</td>
+<td>Return Value (Float)</td>
+<td>Accumulated amount or fractional laps completed for the sorted row.</td>
+</tr>
+<tr>
+<td><strong>Get Display Unit</strong></td>
+<td>Getter (pure)</td>
+<td>-</td>
+<td>Return Value (Float)</td>
+<td>Value represented by one complete visible stack unit after common grouping.</td>
+</tr>
+<tr>
+<td><strong>Get Lap Point</strong></td>
+<td>Getter (pure)</td>
+<td>Row (Integer), At Time (Float)</td>
+<td>Return Value (Vector)</td>
+<td>Position of the lap marker on its centreline in actor-local centimetres.</td>
+</tr>
+<tr>
+<td><strong>Get Readout At Time</strong></td>
+<td>Getter (pure)</td>
+<td>Row (Integer), At Time (Float)</td>
+<td>Return Value (Text)</td>
+<td>Buyer-facing readout as shown in the demo for the sorted row.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="9-themes">9. Themes</h2>
+<h3 id="ck-theme">CK Theme</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Apply Look</strong></td>
+<td>Function</td>
+<td>Target (CK Comparison Base (object))</td>
+<td>-</td>
+<td>Copies the Look onto Target, setting by setting (names match; settings the format lacks are skipped).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="10-data-and-number-format-library">10. Data and number-format library</h2>
+<h3 id="ck-data-library">CK Data Library</h3>
+<table>
+<thead>
+<tr>
+<th>Node</th>
+<th>Kind</th>
+<th>Inputs</th>
+<th>Outputs</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Load Items From CSV</strong></td>
+<td>Function</td>
+<td>File Path (String)</td>
+<td>Return Value (Boolean), Out Items (Array of CK Item), Out Error (String)</td>
+<td>Reads label,value[,country,note,image,mesh,animation,color,value_high,description,category,confidence,evidence,era,year] columns (header names are loose: case, spaces and '_' do not matter;</td>
+</tr>
+<tr>
+<td><strong>Load Items From CSV Columns</strong></td>
+<td>Function</td>
+<td>File Path (String), Label Column (String), Value Column (String)</td>
+<td>Return Value (Boolean), Out Items (Array of CK Item), Out Error (String)</td>
+<td>Load Items From CSV with the columns named: a header or a 1-based column number; empty = automatic.</td>
+</tr>
+<tr>
+<td><strong>Validate Items</strong></td>
+<td>Function</td>
+<td>-</td>
+<td>Return Value (Array of String), Items (Array of CK Item)</td>
+<td>Import guard: drops rows without a name or a finite value, trims names, empties placeholder fields ("N/A", "-", "?") so nothing shows them, ignores a value_high below the value, and lists duplicate names, negative values and double spaces.</td>
+</tr>
+<tr>
+<td><strong>Get Items From Data Table</strong></td>
+<td>Function</td>
+<td>Table (Data Table (object))</td>
+<td>Out Items (Array of CK Item)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Load Series From CSV</strong></td>
+<td>Function</td>
+<td>File Path (String)</td>
+<td>Return Value (Boolean), Out Series (Array of CK Series), Out Error (String)</td>
+<td>Bar chart race data. Long format: label,period,value[,country,image,color], one row per item and period ("year" also works). Wide format: label[,country,image,color] then one column per period with the period as its header (1990,1991,...).</td>
+</tr>
+<tr>
+<td><strong>Get Series From Data Table</strong></td>
+<td>Function</td>
+<td>Table (Data Table (object))</td>
+<td>Out Series (Array of CK Series)</td>
+<td>Row struct must be CKSeriesRow (long format).</td>
+</tr>
+<tr>
+<td><strong>Load Versus From CSV</strong></td>
+<td>Function</td>
+<td>File Path (String)</td>
+<td>Return Value (Boolean), Out Stats (Array of CK Versus Stat), Out Error (String)</td>
+<td>A vs B rounds: stat,a,b[,suffix,lower_wins].</td>
+</tr>
+<tr>
+<td><strong>Load Subtitles From SRT</strong></td>
+<td>Function</td>
+<td>File Path (String)</td>
+<td>Return Value (Boolean), Out Cues (Array of CK Cue), Out Error (String)</td>
+<td>Subtitles from an .srt file (WebVTT-style "00:00:01.000" times also read). Relative paths as for CSV files.</td>
+</tr>
+<tr>
+<td><strong>Sort Items</strong></td>
+<td>Function</td>
+<td>Ascending (Boolean)</td>
+<td>Items (Array of CK Item)</td>
+<td>-</td>
+</tr>
+<tr>
+<td><strong>Normalize Value</strong></td>
+<td>Getter (pure)</td>
+<td>Value (Float), Min Value (Float), Max Value (Float), Mode (CK Scale Mode)</td>
+<td>Return Value (Float)</td>
+<td>0..1 height fraction. Linear and Volume use a zero baseline; Logarithmic spans MinValue..MaxValue.</td>
+</tr>
+<tr>
+<td><strong>Format Value</strong></td>
+<td>Getter (pure)</td>
+<td>Value (Float), Decimals (Integer), Compact (Boolean), Prefix (String), Suffix (String), Unit Of (Float), Grouping (CK Digit Grouping)</td>
+<td>Return Value (Text)</td>
+<td>1234567 -&gt; "1,234,567" or, compact, "1.2M". UnitOf (non-zero) picks the compact unit instead of Value: a counting number keeps its final unit ("0.4B" on the way to "110.9B", never "731.0M"). Grouping picks the thousands separator.</td>
+</tr>
+</tbody>
+</table><div class="pn"><a href="Formats/Environments.html">&larr; Environment demos</a><a href="FAQ.html">FAQ and troubleshooting &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Credits and licenses - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="index.html">Home and Quick Start</a><a href="Data.html">Data: the CSV guide</a><a href="Sequencer.html">Sequencer</a><a href="Looks.html">Looks: themes, label styles and Shorts</a><a href="Rendering.html">Rendering</a><h4>Formats</h4><a href="Formats/index.html">All formats</a><a href="Formats/Ranked_Columns.html">Ranked Column Race</a><a href="Formats/Height_and_Scale.html">Height and scale comparisons</a><a href="Formats/Unit_Piles.html">Unit piles and gold total</a><a href="Formats/Versus.html">Versus and Versus Chapters</a><a href="Formats/Bar_Chart_Race.html">Bar Chart Race</a><a href="Formats/Speed_Race.html">Speed Race and Speed Episodes</a><a href="Formats/Real_Time_Race.html">Real-Time Race</a><a href="Formats/Radius_Rings.html">Radius Rings</a><a href="Formats/Map_Stage.html">Map Stage</a><a href="Formats/Marble_Elimination.html">Marble Elimination</a><a href="Formats/Quantity.html">Accumulator and Lap</a><a href="Formats/Spec_Card.html">Spec Card</a><a href="Formats/Environments.html">Environment demos</a><h4>Reference</h4><a href="API.html">Blueprint API reference</a><a href="FAQ.html">FAQ and troubleshooting</a><a href="Credits.html" class="cur">Credits and licenses</a></nav><main><h1 id="credits-and-licenses">Credits and licenses</h1>
+<p>Comparison Kit's geometry, materials and tools are original work. Environment and data sources are credited below.</p>
+<h2 id="sample-data">Sample data</h2>
+<ul>
+<li><strong>world_population_worldbank.csv:</strong> The World Bank's population file (indicator SP.POP.TOTL, World Development Indicators), exactly as downloaded on 24 Nov 2026 from <a href="https://data.worldbank.org/indicator/SP.POP.TOTL">data.worldbank.org</a>. License: Creative Commons Attribution 4.0 (CC BY 4.0), credit "World Bank". It is kept raw on purpose: <strong>Csv File</strong> reads it as it is. Used by <code>L_CK_ColumnRace_AllCountries_ClassicCity</code>.</li>
+<li>The other files in <code>SampleData</code> are small tables made for the demo maps.</li>
+</ul>
+<h2 id="map-stage">Map Stage</h2>
+<p>Natural Earth public-domain boundary geometry supplies the country shapes: Natural Earth 1:110m Admin 0, version 5.1.1. <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/">Natural Earth data</a> and <a href="https://www.naturalearthdata.com/about/terms-of-use/">terms of use</a>.</p>
+<h2 id="environments">Environments</h2>
+<ul>
+<li><strong>Arid shrub:</strong> Wild Rooibos Bush, Poly Haven, CC0 (<a href="https://polyhaven.com/a/wild_rooibos_bush">source</a>, <a href="https://polyhaven.com/license">license</a>). Geometry and UVs retained; alpha restored from the 2k alpha map; normal map converted to DirectX.</li>
+<li><strong>Open Plain Day terrain:</strong> Valley of the Gods, Utah. Elevation: Mapzen Terrain Tiles with United States 3DEP data, courtesy of the U.S. Geological Survey. Orthophotography: USGS NAIP. US government source data in the public domain. The comparison pad is flattened; the scene is a visual backdrop, not a navigation or surveying product.</li>
+<li><strong>Open Plain Alpine terrain:</strong> Jackson Hole and the Teton front, Wyoming. Elevation: USGS 3DEP via AWS Terrain Tiles. Orthophotography: USDA NAIP via The National Map (<a href="https://imagery.nationalmap.gov/arcgis/rest/services/USGSNAIPImagery/ImageServer">imagery service</a>). Public domain.</li>
+<li><strong>Open Plain Prairie terrain:</strong> Flint Hills, Kansas. Elevation: USGS 3DEP via Mapzen/AWS Terrain Tiles (<a href="https://registry.opendata.aws/terrain-tiles/">registry</a>). Orthophotography: USDA NAIP via The National Map. Public domain.</li>
+<li><strong>Ground detail</strong> for Alpine and Prairie: Grass Ground, Poly Haven, CC0 (<a href="https://polyhaven.com/a/grass_ground">source</a>).</li>
+<li><strong>Environment ladder:</strong> reuses the Open Plain Day terrain and the kit's CC0 sky cubemaps.</li>
+<li><strong>Utility hut:</strong> adapted from The Shed by Poly Haven, CC0 (<a href="https://polyhaven.com/collections/the_shed/">collection</a>). The surrounding greenhouse and unrelated objects are excluded; a masonry back wall and a second door close the standalone hut.</li>
+<li><strong>City Street and athletics track:</strong> the street barrier is adapted from the Poly Haven concrete road barrier. Sources: <a href="https://polyhaven.com/a/concrete_road_barrier">concrete road barrier</a>, <a href="https://polyhaven.com/a/asphalt_04">asphalt 04</a>, <a href="https://polyhaven.com/a/concrete_floor_02">concrete floor 02</a>, <a href="https://polyhaven.com/a/concrete_pavement_02">concrete pavement 02</a>, <a href="https://polyhaven.com/a/urban_street_03">urban street 03</a>, <a href="https://polyhaven.com/a/stadium_01">stadium 01</a>, <a href="https://polyhaven.com/a/running_track">running track</a>, <a href="https://polyhaven.com/a/grass_ground">grass ground</a>.</li>
+<li><strong>Ocean Surface:</strong> the swell grid, material and mooring buoy geometry are original. The buoy dimensions follow the Polyform A-7 size chart (<a href="https://polyformus.com/pages/buoys-size-chart">chart</a>). Surface detail: ambientCG Plastic011 (<a href="https://ambientcg.com/view?id=Plastic011">source</a>). Light and sky: Poly Haven <a href="https://polyhaven.com/a/kloofendal_43d_clear">Kloofendal 43d clear</a>.</li>
+<li><strong>Warehouse:</strong> the timber pallet (1200 x 800 x 144 mm) is original. Sources: <a href="https://polyhaven.com/a/empty_warehouse_01">Empty Warehouse 01</a>, <a href="https://polyhaven.com/a/hangar_concrete_floor">Hangar Concrete Floor</a>, <a href="https://polyhaven.com/a/hinoki_planks">Hinoki Planks</a>, <a href="https://ambientcg.com/view?id=Metal009">ambientCG Metal009</a>. Poly Haven and ambientCG assets are CC0.</li>
+<li><strong>Clothed stadium spectators:</strong> the distant spectator atlas uses the MakeHuman CC0 core figure, garments, hair, skin and poses, rendered into an atlas that ships with the plugin (<a href="https://www.makehumancommunity.org/about/license.html">license</a>, <a href="https://static.makehumancommunity.org/assets/assetpacks/index.html">asset packs</a>).</li>
+<li><strong>City facade and vertical section:</strong> Poly Haven Modular Urban Apartments Facade, with clay roof tiles, brick and concrete scans; the rock section uses parts of Namaqualand Cliff 02 and Sandstone Cracks. Sources: <a href="https://polyhaven.com/a/modular_urban_apartments_facade">facade</a>, <a href="https://polyhaven.com/a/clay_roof_tiles">clay roof tiles</a>, <a href="https://polyhaven.com/a/brick_wall_001">brick wall 001</a>, <a href="https://polyhaven.com/a/namaqualand_cliff_02">namaqualand cliff 02</a>, <a href="https://polyhaven.com/a/sandstone_cracks">sandstone cracks</a>.</li>
+</ul>
+<p>Terrain and aerial imagery are adapted visual backdrops, not surveying products.</p>
+<h2 id="real-banknotes">Real banknotes</h2>
+<p>The cash bundle's print is a fictional currency. Reproducing real banknotes is regulated; check the rules for your currency before publishing a video that shows one.</p><div class="pn"><a href="FAQ.html">&larr; FAQ and troubleshooting</a><span></span></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

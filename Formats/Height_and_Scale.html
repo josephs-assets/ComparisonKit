@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Height and scale comparisons - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="../index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="../index.html">Home and Quick Start</a><a href="../Data.html">Data: the CSV guide</a><a href="../Sequencer.html">Sequencer</a><a href="../Looks.html">Looks: themes, label styles and Shorts</a><a href="../Rendering.html">Rendering</a><h4>Formats</h4><a href="index.html">All formats</a><a href="Ranked_Columns.html">Ranked Column Race</a><a href="Height_and_Scale.html" class="cur">Height and scale comparisons</a><a href="Unit_Piles.html">Unit piles and gold total</a><a href="Versus.html">Versus and Versus Chapters</a><a href="Bar_Chart_Race.html">Bar Chart Race</a><a href="Speed_Race.html">Speed Race and Speed Episodes</a><a href="Real_Time_Race.html">Real-Time Race</a><a href="Radius_Rings.html">Radius Rings</a><a href="Map_Stage.html">Map Stage</a><a href="Marble_Elimination.html">Marble Elimination</a><a href="Quantity.html">Accumulator and Lap</a><a href="Spec_Card.html">Spec Card</a><a href="Environments.html">Environment demos</a><h4>Reference</h4><a href="../API.html">Blueprint API reference</a><a href="../FAQ.html">FAQ and troubleshooting</a><a href="../Credits.html">Credits and licenses</a></nav><main><h1 id="height-and-scale-comparisons">Height and scale comparisons</h1>
+<div class="toc"><b>On this page</b><ul><li><a href="#height-compare">Height Compare</a></li><li><a href="#giant-height">Giant Height</a></li><li><a href="#multiplier">Multiplier</a></li><li><a href="#scale-ladder">Scale Ladder</a></li><li><a href="#parade">Parade</a></li><li><a href="#tips">Tips</a></li></ul></div>
+<p>Five formats share one actor, <strong>CK Comparison Row</strong>, with <strong>Item Shape</strong> = Mesh. Each item's mesh (its own <strong>mesh</strong> column, else <strong>Shape Mesh</strong>; static or skeletal) is scaled uniformly from zero so its height equals its value: true relative scale.</p>
+<p><img alt="A lineup of animals at true relative height beside a scale reference figure" src="img/format_height_compare.jpg" /></p>
+<h2 id="height-compare">Height Compare</h2>
+<p>Meshes side by side at true height, value and unit labels, the camera following the leader.</p>
+<ul>
+<li>Maps: <code>L_CK_HeightCompare_StudioGlass</code> (and <code>_Shorts</code>), <code>L_CK_TallestAnimals_StudioGlass</code>, <code>L_CK_AnimalCages_StudioGlass</code>, <code>L_CK_CityStreet</code>.</li>
+<li>Label style demos on the same data: <code>L_CK_HeightLineup_StudioGlass</code>, <code>L_CK_HeightLowerThird_StudioGlass</code>, <code>L_CK_HeightMuseum_StudioGlass</code>, <code>L_CK_HeightSpecSheet_StudioGlass</code>. See label styles in <a href="../Looks.html">Looks</a>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Item Shape</strong> (<code>ItemShape</code>)</td>
+<td>Column</td>
+<td>- <em>(Details: Comparison | Layout)</em></td>
+</tr>
+<tr>
+<td><strong>Shape Mesh</strong> (<code>ShapeMesh</code>)</td>
+<td>-</td>
+<td>Mesh used when a row has no Mesh of its own (Item Shape Mesh or Units). <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Shape Character</strong> (<code>ShapeCharacter</code>)</td>
+<td>-</td>
+<td>Item Shape Mesh: a character for every row without a Mesh of its own, scaled so its height is the value's and playing Shape Animation, each item out of step (a mascot or giant per country). Wins over Shape Mesh. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Shape Animation</strong> (<code>ShapeAnimation</code>)</td>
+<td>-</td>
+<td>Loop for Shape Character, and for a row's own skeletal Mesh that has no Animation (same skeleton only). <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Shape Material</strong> (<code>ShapeMaterial</code>)</td>
+<td>-</td>
+<td>Optional material for every shape mesh (empty = the mesh's own materials). An item with an Image puts it in the material's "Tile" texture parameter (a heap covered in that item's picture, e.g. M_CK_HeapTiled). <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Scale Reference Mesh</strong> (<code>ScaleReferenceMesh</code>)</td>
+<td>-</td>
+<td>A familiar object (the 1.75 m mannequin) next to every item, at the same scale as the items. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Scale Reference Value</strong> (<code>ScaleReferenceValue</code>)</td>
+<td>0</td>
+<td>The reference's own size in the data's unit (1.75 for a person when values are metres; metres with Volume Per Unit). 0 = no reference. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Height Lines</strong> (<code>bHeightLines</code>)</td>
+<td>false</td>
+<td>Mesh shape: a thin line at each item's top reaching back to the previous item, so tops compare at a glance. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Volume Per Unit</strong> (<code>VolumePerUnit</code>)</td>
+<td>0</td>
+<td>Mesh shape, true volume: the item's solid is value x Volume Per Unit cubic metres (gold: 1 tonne = 0.0518 m3), so heaps and blocks stand at their real size (Max Height and Scale Mode are not used). 0 = off. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Area Per Unit</strong> (<code>AreaPerUnit</code>)</td>
+<td>0</td>
+<td>Mesh shape, true area: the item lies flat covering value x Area Per Unit square metres (km2 data: 1,000,000), its footprint scaled uniformly; with Fit Shape To Image a flat sheet (SM_CK_AreaSheet) shows the item's picture, a map or an aerial photo, at its own proportions. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+<tr>
+<td><strong>Fit Shape To Image</strong> (<code>bFitShapeToImage</code>)</td>
+<td>false</td>
+<td>Photo cut-outs: with a Shape Material and an item Image, the mesh's width follows the picture's aspect, so a flat card (SM_CK_CutoutCard + M_CK_PhotoCutout) stands as that picture cut out along its alpha, its height the value. <em>(Details: Comparison | Shape)</em></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Add a <strong>Scale Reference Mesh</strong> (for example a 1.75 m mannequin) and <strong>Height Lines</strong> for a ruler.</li>
+<li><strong>Reference rows:</strong> rows marked <code>reference</code> stand beside the items at the same scale; each item gets the largest reference not bigger than itself (a person by a house, a bus by a tower, the Moon by the Earth). <strong>Reference Table</strong> adds a whole set: <code>DT_CK_References</code> (person, car, bus, pylon, wind turbine, mountain, Moon, Earth; values in metres) or <code>DT_CK_EverydayReferences</code>.</li>
+<li><strong>Your own pictures as cut-outs:</strong> Shape Mesh = <code>SM_CK_CutoutCard</code>, Shape Material = <code>M_CK_PhotoCutout</code>, <strong>Fit Shape To Image</strong> on. A PNG with transparency stands as a silhouette, a JPG as a photo card.</li>
+<li><strong>Enclosure:</strong> <strong>Enclosure Module</strong> repeats a panel in a ring around every item (cage bars, a fence, stadium stands). The demo is <code>L_CK_AnimalCages_StudioGlass</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Enclosure Module</strong> (<code>EnclosureModule</code>)</td>
+<td>-</td>
+<td>A ring around every item (cage bars, stadium stands, a fence): this module repeats along a polygon whose sides stay Enclosure Margin clear of the item, at true scale, standing from the start like the plinths. <em>(Details: Comparison | Enclosure)</em></td>
+</tr>
+<tr>
+<td><strong>Enclosure Corner</strong> (<code>EnclosureCorner</code>)</td>
+<td>-</td>
+<td>Piece at every corner of the ring (a post, SM_CK_CagePost; pivot base centre). Empty = none. <em>(Details: Comparison | Enclosure)</em></td>
+</tr>
+<tr>
+<td><strong>Enclosure Module Length</strong> (<code>EnclosureModuleLength</code>)</td>
+<td>300</td>
+<td>One module, corner to corner, cm (SM_CK_CagePanel: 300). <em>(Details: Comparison | Enclosure)</em></td>
+</tr>
+<tr>
+<td><strong>Enclosure Margin</strong> (<code>EnclosureMargin</code>)</td>
+<td>150</td>
+<td>Clear space between the item's footprint and the ring's sides, cm. Neighbouring rings keep Gap between them. <em>(Details: Comparison | Enclosure)</em></td>
+</tr>
+<tr>
+<td><strong>Enclosure Min Sides</strong> (<code>EnclosureMinSides</code>)</td>
+<td>8</td>
+<td>Fewest sides (more for a bigger item). Under 8 the cage panel's end pads dig into the posts. <em>(Details: Comparison | Enclosure)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="giant-height">Giant Height</h2>
+<p>A very tall subject framed from its foot upward so the scale reads in the frame.</p>
+<ul>
+<li>Maps: <code>L_CK_HeightGiant_ClassicCity</code>, <code>L_CK_Giants_ClassicCity</code>.</li>
+<li><strong>Giant Foot Reveal</strong> (Timing): #1 opens on its base only, towering out of frame, then the camera cranes up to the whole of it. <strong>Street Level Look</strong> keeps the camera at a person's eye height and tilts up the giant.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Giant Foot Reveal</strong> (<code>bGiantFootReveal</code>)</td>
+<td>false</td>
+<td>Giant Foot: #1 already stands when the camera reaches it; the camera pushes in low on its base (its top far out of frame), holds a beat, then cranes up and back to show all of it (Final Reveal Seconds). Off: #1 builds while the camera climbs. <em>(Details: Comparison | Timing)</em></td>
+</tr>
+<tr>
+<td><strong>Street Level Look</strong> (<code>bStreetLevelLook</code>)</td>
+<td>false</td>
+<td>Giant Foot, first person: the camera stays at a person's eye height on the street and tilts up the giant to its top, instead of craning up and back. <em>(Details: Comparison | Timing)</em></td>
+</tr>
+<tr>
+<td><strong>Street Eye Height</strong> (<code>StreetEyeHeight</code>)</td>
+<td>170</td>
+<td>Street Level Look: lens height above the ground (cm). <em>(Details: Comparison | Timing)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="multiplier">Multiplier</h2>
+<p>Every item is drawn and counted at N times its value (insects x1000 beside people); the cards add the real size ("real 4 mm").</p>
+<ul>
+<li>Map: <code>L_CK_FruitX20_StudioGlass</code>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Value Multiplier</strong> (<code>ValueMultiplier</code>)</td>
+<td>1</td>
+<td>Every item drawn and counted at N times its value (insects x1000 beside real people); the cards add the real value. 1 = off. Reference rows keep their real size unless Multiply References. <em>(Details: Comparison | Values)</em></td>
+</tr>
+<tr>
+<td><strong>Multiply References</strong> (<code>bMultiplyReferences</code>)</td>
+<td>false</td>
+<td>The scale references grow by Value Multiplier too (a x1000 human palm beside x1000 insects). <em>(Details: Comparison | Values)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="scale-ladder">Scale Ladder</h2>
+<p>From a person to a planet in one take. Every item stands at its true size (values in metres) and the camera pulls back on a log curve, holding each item at the same share of the frame. Between <strong>Space Fade Start</strong> and <strong>Space Fade End</strong> the fog thins out, the day sky darkens into stars and the floor goes, so the last items hang in space. The set rides along and grows with the view.</p>
+<ul>
+<li>Maps: <code>L_CK_ScaleLadder_ClassicSkyline_Cumulus</code> (and <code>_Shorts</code>), data <code>DT_CK_SizeLadder</code>. <code>L_CK_EnvironmentLadder_OpenPlain</code> shows an environment ladder over open terrain.</li>
+<li><strong>Length Ladder</strong> (Values): values are lengths in metres; each card picks its own unit (cm, m, km, million km, light years) and the first item in a new unit carries a note such as "1 km = 1,000 m".</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Scale Ladder</strong> (<code>bScaleLadder</code>)</td>
+<td>false</td>
+<td>The camera pulls back from item to item at a constant zoom rate (a log scale, from a person to a planet) and the set fades into space as the view grows. Plinths, height lines, spotlights and the size-band references are off. <em>(Details: Comparison | Scale Ladder)</em></td>
+</tr>
+<tr>
+<td><strong>Space Fade Start</strong> (<code>SpaceFadeStart</code>)</td>
+<td>300000</td>
+<td>Frame height (cm) where the set (floor, backdrop, props, fog) starts to fade into space. <em>(Details: Comparison | Scale Ladder)</em></td>
+</tr>
+<tr>
+<td><strong>Space Fade End</strong> (<code>SpaceFadeEnd</code>)</td>
+<td>3000000</td>
+<td>Frame height (cm) where the set is gone and only the items and the lights remain. <em>(Details: Comparison | Scale Ladder)</em></td>
+</tr>
+<tr>
+<td><strong>Environment Stages</strong> (<code>EnvironmentStages</code>)</td>
+<td>-</td>
+<td>Optional full environment ladder. Base Theme comes first; these sets fade in over ascending frame spans (metres). Empty preserves the legacy Space Fade Start/End. Rebuild after changing stages. Build Set must be on. <em>(Details: Comparison | Environment)</em></td>
+</tr>
+<tr>
+<td><strong>Ladder Sway Degrees</strong> (<code>LadderSwayDegrees</code>)</td>
+<td>0</td>
+<td>Optional continuous yaw sweep for a Scale Ladder. Keeps the subject in view while distant backgrounds move. 0 disables it. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+<tr>
+<td><strong>Ladder Sway Seconds</strong> (<code>LadderSwaySeconds</code>)</td>
+<td>8</td>
+<td>Seconds for one complete Scale Ladder camera sweep. Sequencer seeks reproduce the same pose. <em>(Details: Comparison | Camera)</em></td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Length Ladder</strong> (<code>bLengthLadder</code>)</td>
+<td>false</td>
+<td>Values are lengths in metres, each shown in the unit that fits: cm, m (up to 9,999 m), km, million km, light years, to three figures. The first item in a new unit adds the step ("1 km = 1,000 m"). Value Suffix and Decimals are not used. <em>(Details: Comparison | Values)</em></td>
+</tr>
+</tbody>
+</table>
+<p>Plinths, height lines, spotlights and the #1 climb are off in a ladder; the hold keeps pulling back.</p>
+<h2 id="parade">Parade</h2>
+<p>A reference figure walks along the row with the camera while the items walk the same way at <strong>Parade Item Speed</strong> (a share of its pace), so it draws level with each item exactly when the camera arrives there. Skeletal meshes walk with their animation, timed by the distance walked (no foot sliding); static meshes move by their <code>movement</code> column (walk, run, crawl, float, swim, fly, glide). Everything stops when the walker reaches #1.</p>
+<ul>
+<li>Maps: <code>L_CK_Parade_StudioGlass</code> (and <code>_Shorts</code>).</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Field</th>
+<th>Default</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parade</strong> (<code>bParade</code>)</td>
+<td>false</td>
+<td>The anchor (the first Reference row, else the smallest reference) walks beside the camera and passes one item per Seconds Per Item, stopping at #1. With Parade Lineup the items stand in a line facing the camera; <em>(Details: Comparison | Parade)</em></td>
+</tr>
+<tr>
+<td><strong>Parade Lineup</strong> (<code>bParadeLineup</code>)</td>
+<td>true</td>
+<td>The items stand at their places facing the camera, a skeletal one playing Parade Idle, while the anchor walks past them. Off, they walk forward beside the anchor, side-on to the camera. <em>(Details: Comparison | Parade)</em></td>
+</tr>
+<tr>
+<td><strong>Parade Idle</strong> (<code>ParadeIdle</code>)</td>
+<td>-</td>
+<td>The standing loop of a skeletal item in the lineup (its own Animation is its walk). Needs the item's skeleton; an item on another skeleton keeps its own Animation. <em>(Details: Comparison | Parade)</em></td>
+</tr>
+<tr>
+<td><strong>Parade Item Speed</strong> (<code>ParadeItemSpeed</code>)</td>
+<td>0.5</td>
+<td>The items' pace as a share of the anchor's past a standard slot (0 = they stand still while the anchor walks past). Not used by the lineup. <em>(Details: Comparison | Parade)</em></td>
+</tr>
+</tbody>
+</table>
+<h2 id="tips">Tips</h2>
+<ul>
+<li>Give every row a value in the same unit (metres is the usual one) and put the unit in <strong>Value Suffix</strong>. <strong>Secondary Unit Factor</strong> 3.28084 with <strong>Secondary Suffix</strong> " ft" shows both units.</li>
+<li>Skeletal meshes can play a loop through the <code>animation</code> column or <strong>Shape Animation</strong>.</li>
+<li><code>L_CK_PeopleCubes_AerialMall</code> and <code>L_CK_IslandSheets_StudioTable</code> use the same actor with area and volume data (<strong>Area Per Unit</strong>, <strong>Volume Per Unit</strong>).</li>
+</ul><div class="pn"><a href="Ranked_Columns.html">&larr; Ranked Column Race</a><a href="Unit_Piles.html">Unit piles and gold total &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>

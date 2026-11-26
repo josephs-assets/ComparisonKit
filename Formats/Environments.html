@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Environment demos - Comparison Kit</title>
+<meta name="description" content="Documentation for Comparison Kit, an Unreal Engine 5.7 code plugin by Joseph's.">
+<style>
+:root{--bg:#fff;--fg:#1f2328;--muted:#59636e;--line:#d1d9e0;--soft:#f6f8fa;--link:#0969da;--head:#1b2a41;--headfg:#fff;--accent:#e8590c}
+@media (prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}}
+:root[data-theme=dark]{--bg:#0d1117;--fg:#e6edf3;--muted:#9198a1;--line:#30363d;--soft:#151b23;--link:#4493f8;--head:#010409;--headfg:#e6edf3;--accent:#ff922b}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+a{color:var(--link);text-decoration:none}a:hover{text-decoration:underline}
+header.top{background:var(--head);color:var(--headfg);padding:14px 16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+header.top a{color:var(--headfg)}header.top .t{font-weight:600;font-size:17px}header.top .sp{flex:1}
+header.top .sup{border:1px solid rgba(255,255,255,.35);border-radius:6px;padding:4px 10px;font-size:14px}
+.wrap{display:flex;max-width:1240px;margin:0 auto;padding:0 16px}
+nav.side{width:270px;flex:none;padding:24px 20px 40px 0;font-size:14.5px;position:sticky;top:0;align-self:flex-start;max-height:100vh;overflow:auto}
+nav.side h4{margin:18px 0 6px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+nav.side a{display:block;padding:3px 8px;border-radius:6px;color:var(--fg)}nav.side a.cur{background:var(--soft);font-weight:600;border-left:3px solid var(--accent)}
+nav.side a:hover{background:var(--soft);text-decoration:none}
+main{min-width:0;flex:1;padding:28px 0 60px 24px;max-width:900px}
+main h1{font-size:2em;border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:0}
+main h2{border-bottom:1px solid var(--line);padding-bottom:.3em;margin-top:1.8em}main h3{margin-top:1.5em}
+code{background:var(--soft);padding:.15em .35em;border-radius:5px;font-size:88%}
+pre{background:var(--soft);padding:14px;border-radius:8px;overflow:auto}pre code{background:none;padding:0}
+table{border-collapse:collapse;display:block;overflow-x:auto;max-width:100%;margin:1em 0}
+th,td{border:1px solid var(--line);padding:6px 12px;vertical-align:top}th{background:var(--soft);text-align:left}tr:nth-child(even) td{background:color-mix(in srgb,var(--soft) 55%,transparent)}
+blockquote{margin:1em 0;padding:0 1em;color:var(--muted);border-left:4px solid var(--line)}
+img{max-width:100%}hr{border:0;border-top:1px solid var(--line);margin:2em 0}
+.toc{background:var(--soft);border:1px solid var(--line);border-radius:8px;padding:10px 16px;margin:0 0 22px;font-size:14.5px}
+.toc ul{margin:4px 0;padding-left:20px}.toc b{font-size:13px;text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.pn{display:flex;justify-content:space-between;gap:12px;margin-top:40px;border-top:1px solid var(--line);padding-top:16px;font-size:15px}
+footer{border-top:1px solid var(--line);color:var(--muted);font-size:14px;padding:22px 16px;text-align:center}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.35);color:var(--headfg);border-radius:6px;padding:4px 10px;font-size:15px;cursor:pointer}
+@media (max-width:860px){.wrap{display:block;padding:0 16px}nav.side{display:none;position:static;width:auto;max-height:none;padding:8px 0}nav.side.open{display:block}.menu{display:inline-block}main{padding:18px 0 40px}}
+</style></head><body>
+<header class="top"><button class="menu" aria-label="Menu">Menu</button><a class="t" href="../index.html">Comparison Kit</a><span class="sp"></span>
+<a class="sup" href="https://github.com/josephs-assets/ComparisonKit/issues">Support: GitHub issues</a></header>
+<div class="wrap"><nav class="side"><h4>Start</h4><a href="../index.html">Home and Quick Start</a><a href="../Data.html">Data: the CSV guide</a><a href="../Sequencer.html">Sequencer</a><a href="../Looks.html">Looks: themes, label styles and Shorts</a><a href="../Rendering.html">Rendering</a><h4>Formats</h4><a href="index.html">All formats</a><a href="Ranked_Columns.html">Ranked Column Race</a><a href="Height_and_Scale.html">Height and scale comparisons</a><a href="Unit_Piles.html">Unit piles and gold total</a><a href="Versus.html">Versus and Versus Chapters</a><a href="Bar_Chart_Race.html">Bar Chart Race</a><a href="Speed_Race.html">Speed Race and Speed Episodes</a><a href="Real_Time_Race.html">Real-Time Race</a><a href="Radius_Rings.html">Radius Rings</a><a href="Map_Stage.html">Map Stage</a><a href="Marble_Elimination.html">Marble Elimination</a><a href="Quantity.html">Accumulator and Lap</a><a href="Spec_Card.html">Spec Card</a><a href="Environments.html" class="cur">Environment demos</a><h4>Reference</h4><a href="../API.html">Blueprint API reference</a><a href="../FAQ.html">FAQ and troubleshooting</a><a href="../Credits.html">Credits and licenses</a></nav><main><h1 id="environment-demos">Environment demos</h1>
+<p>Besides the Studio Glass set, the kit ships photographic and measured environments. Open a level under <code>Plugins &gt; Comparison Kit &gt; Maps</code> and press <strong>Play</strong>. Each demo starts automatically. Select the comparison actor in the Outliner to change its data. After changing data through Blueprint, call <strong>Rebuild</strong>; use <strong>Set Time</strong> to replay a particular moment.</p>
+<p><img alt="The City Street, ocean, stadium and prairie demos" src="img/environments_overview.jpg" /></p>
+<table>
+<thead>
+<tr>
+<th>Map</th>
+<th>What to try</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>L_CK_CityStreet</code></td>
+<td>Compare the height of a road barrier, a covered car and a bus against the same pavement and apartment modules. The row values are mesh heights in metres. The wet asphalt material exposes <strong>Wetness</strong>.</td>
+</tr>
+<tr>
+<td><code>L_CK_OceanSurface</code></td>
+<td>Compare groups of two and six mooring buoys. In the theme's <strong>Ocean</strong> settings change <strong>Amplitude</strong> in centimetres or <strong>Period</strong> in seconds. Set amplitude to zero for flat water.</td>
+</tr>
+<tr>
+<td><code>L_CK_StadiumTrack</code></td>
+<td>Follow three pacers in a 40 m training run. The sample finish times are 10.8, 12.0 and 13.4 seconds. Change <strong>Finish Time</strong> on one row, rebuild and compare the leaderboard at the finish.</td>
+</tr>
+<tr>
+<td><code>L_CK_StadiumCrowd</code></td>
+<td>The same 40 m comparison with a populated home straight: 485 stationary audience figures (two-sided cards composed for track-distance views), terraces and access stairs as meshes. Select the <strong>Stadium Track</strong> theme to use the empty oval.</td>
+</tr>
+<tr>
+<td><code>L_CK_Accumulator</code>, <code>L_CK_Lap</code></td>
+<td>Earning rates and lap times in the Warehouse set. See <a href="Quantity.html">Accumulator and Lap</a>.</td>
+</tr>
+<tr>
+<td><code>L_CK_OpenPlainAlpine</code>, <code>L_CK_OpenPlainPrairie</code></td>
+<td>A true-scale car and person example over open terrain. Each has a matching sequence (<code>LS_CK_OpenPlainAlpine</code>, <code>LS_CK_OpenPlainPrairie</code>) with four inspection views.</td>
+</tr>
+<tr>
+<td><code>L_CK_UtilityHut</code></td>
+<td>The prairie utility hut with <code>LS_CK_UtilityHut</code> and four inspection views.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="water-comparison">Water comparison</h2>
+<p>Choose <strong>Unit Layout</strong> = Field, enable <strong>Float Field Units</strong>, then set <strong>Unit Draft Cm</strong> for the mesh pivot (the demo uses 46 cm). <strong>Get Ocean Surface At World Point</strong> returns a transform at the sampled surface whose up axis is the water normal for your world position and presentation time. The wave and the buoy readouts follow the comparison clock during Play, Sequencer and reverse seeks.</p>
+<h2 id="track-race-on-a-level-surface">Track race on a level surface</h2>
+<p>Set <strong>Fixed Theme Set</strong> on and <strong>Draw Track</strong> off. The stadium has eight 1.22 m lanes, and the material marks the near straight for a 40 m drill. <strong>Hold Last Frame</strong> keeps the completed comparison on screen at the end of normal Play.</p>
+<h2 id="open-terrain-themes">Open terrain themes</h2>
+<p>Enable <strong>Build Set</strong> and choose <code>DA_CK_Theme_OpenPlainDay</code> for the desert, <code>DA_CK_Theme_OpenPlainAlpine</code> for the mountain valley or <code>DA_CK_Theme_OpenPlainPrairie</code> for rolling grassland. Each terrain covers an 81 km square around a flattened comparison pad and uses a 100 km sky; it is a visual set, not a geographic simulation.</p>
+<h2 id="utility-hut">Utility hut</h2>
+<p>Drag <code>Environments/UtilityHut/BP_CK_UtilityHut</code> into your own level for the complete hut. Move, rotate and scale the actor normally; its 195 fasteners share mesh instances. It adds no camera or lights. The pivot is on the ground and the front faces +X. The assembly measures about 4.41 x 3.32 x 3.49 metres with simple box collision. It is closed set dressing: the doors do not open and it is not a walkable interior.</p><div class="pn"><a href="Spec_Card.html">&larr; Spec Card</a><a href="../API.html">Blueprint API reference &rarr;</a></div></main></div>
+<footer>Comparison Kit &middot; documentation by Joseph's &middot; <a href="https://github.com/josephs-assets/ComparisonKit/issues">Support</a></footer>
+<script>
+(function(){var b=document.querySelector('.menu'),n=document.querySelector('nav.side');if(b)b.onclick=function(){n.classList.toggle('open')};
+var c=document.querySelector('nav.side a.cur');if(c&&c.scrollIntoView&&window.innerWidth>860){try{c.scrollIntoView({block:'center'})}catch(e){}}})();
+</script></body></html>
